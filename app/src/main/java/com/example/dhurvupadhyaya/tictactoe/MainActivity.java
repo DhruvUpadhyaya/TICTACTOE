@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
             if (myActivePlayer == 0)
             {
                 myTapped.setImageResource(R.drawable.cross);
-                myTapped.animate().rotation(360).setDuration(1000);
+              //  myTapped.animate().rotation(360).setDuration(1000);
+                myTapped.animate().rotation(myTapped.getRotation()+(180)).setDuration(1000);
                 myActivePlayer = 1;
 
             }else
@@ -80,5 +81,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 }
